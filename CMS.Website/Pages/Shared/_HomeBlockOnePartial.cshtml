@@ -1,0 +1,17 @@
+﻿@page
+@model CMS.Website.Pages.Shared._HomeBlockOnePartialModel
+
+    <article class="item-news full-thumb article-topstory">
+        <div class="thumb-art">
+            <a class="thumb thumb-5x3" href="/bai-viet/@Model.BlockOne.URL" title="@Model.BlockOne.Name">
+                <picture>
+                    <img class="lazy lazied" alt="@Model.BlockOne.Name" src="/data/article/mainimages/original/@Model.BlockOne.Image">
+                </picture>
+            </a>
+        </div>
+        <h3 class="title-news"><a href="/bai-viet/@Model.BlockOne.URL" title="@Model.BlockOne.Name"> @Model.BlockOne.Name</a></h3>
+        <p class="description">@Model.BlockOne.Description</p>
+        <div class="datetime">
+            @*<i class="far fa-clock"></i>@DateTime.Parse(Model.BlockOne.CreateDate.ToString()).ToString("HH:mm | dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)*@
+        </div>
+    </article>

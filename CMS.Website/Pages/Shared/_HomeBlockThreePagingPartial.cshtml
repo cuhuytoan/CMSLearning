@@ -1,0 +1,74 @@
+﻿@page 
+@model CMS.Website.Pages.Shared._HomeBlockThreePagingPartialModel
+@{
+    int prevPage = 0; int nextPage = 1;
+    if(Model.CurrentPage <=1)
+    {
+        prevPage = 1;
+    }
+    else
+    {
+        prevPage = Model.CurrentPage - 1;
+    }
+    nextPage = Model.CurrentPage + 1;
+}
+<div class="col-left col-small">
+    @foreach (var p in Model.BlockThree)
+    {
+        <article class="item-news item-news-common">
+            <h3 class="title-news"><a href="/bai-viet/@p.URL" title="@p.Name">@p.Name</a></h3>
+            <div class="thumb-art">
+                <a class="thumb thumb-5x3" href="#" title="@p.Name">
+                    <picture>
+                        <!--if IE 9video(style='display: none;')
+                        -->
+                        <source srcset="/data/article/mainimages/original/@p.Image">
+                        <!--if IE 9-->
+                        <img class="lazy lazied" alt="Mất trắng tài sản sau lũ" src="/data/article/mainimages/original/@p.Image">
+                    </picture>
+                </a>
+            </div>
+            <p class="description"><a href="/bai-viet/@p.URL" title="@p.Name">@p.Description</a></p>
+        </article>
+
+    }
+
+
+    <div class="container flexbox">
+        <div class="width_common pagination flexbox">
+            <div class="paging flexbox">
+                <div class="select-page"><span class="selected-page">Trang</span></div>
+                <div class="button-page flexbox">
+                    <a class="btn-page prev-page" href="/chuyen-muc/@ViewData["ReturnUrl"]?p=@prevPage">
+                        <svg class="ic ic-arrow-left">
+                            <use xlink:href="#Arrow-Left-1">
+                                <svg id="Arrow-Left-1" viewBox="0 0 32 32">
+                                    <path d="M22.2 0.6l3 2.8-12.6 12.6 12.6 12.6-3 2.8-15.4-15.4 15.4-15.4z"></path>
+                                </svg>
+                            </use>
+                        </svg>
+                    </a>
+                    @for (var i = 1; i <= Model.TotalPages; i++)
+                    {
+                        @*<li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                                <a asp-page="/pagination" asp-route-currentpage="@i" class="page-link">@i</a>
+                            </li>*@
+                        <a href="/chuyen-muc/@ViewData["ReturnUrl"]?p=@i" class="btn-page type_page @(i == Model.CurrentPage ? "active" : "")" type="text" value="@i" disabled>@i </a>
+                    }
+
+
+
+                    <a class="btn-page next-page" href="/chuyen-muc/@ViewData["ReturnUrl"]?p=@nextPage">
+                        <svg class="ic ic-arrow-right">
+                            <use xlink:href="#Arrow-Right-1">
+                                <svg id="Arrow-Right-1" viewBox="0 0 32 32">
+                                    <path d="M9.8 31.4l-3-2.8 12.6-12.6-12.6-12.6 3-2.8 15.4 15.4-15.4 15.4z"></path>
+                                </svg>
+                            </use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

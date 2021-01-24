@@ -1,0 +1,19 @@
+﻿@page
+@model CMS.Website.Pages.Shared._HomeBlockTwoPartialModel
+    <div class="inner-sub-news-top">
+        <div class="scroll-sub-featured">
+            <ul class="list-sub-feature">
+                @foreach (var p in Model.BlockTwo)
+                {
+                <li>
+                    <div class="img-box">
+                        <a class="" href="/bai-viet/@p.URL" title="@p.Name">
+                            <img class="" alt="@p.Name" src="/data/article/mainimages/original/@p.Image">
+                        </a>
+                    </div>
+                    <h3 class="title_news"><a href="/bai-viet/@p.URL" title="@p.Name">@p.Name</a></h3>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>

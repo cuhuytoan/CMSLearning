@@ -1,0 +1,47 @@
+﻿@page
+@model CMS.Website.Pages.Shared._CategoryOnePartialModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@foreach (var p in Model.CategoryBlockOne)
+{
+    <div class="box-category box-cate-featured box-cate-featured-vertical">
+        <hgroup class="width_common title-box-category thoisu">
+            <h2 class="parent-cate"><a class="inner-title box-title" href="/chuyen-muc/@p.Item3.Url" title="@p.Item3.Name">@p.Item3.Name</a></h2>
+        </hgroup>
+        <div class="width_common content-box-category">
+            <article class="item-news full-thumb">
+                <div class="thumb-art">
+                    <a class="thumb thumb-5x3" href="/bai-viet/@p.Item1.URL" title="@p.Item1.Name">
+                        <picture>
+                            <!--if IE 9video(style='display: none;')
+                            -->
+                            <source srcset="/data/article/mainimages/original/@p.Item1.Image">
+                            <!--if IE 9-->
+                            <img class="lazy lazied" alt="Hồ thủy điện cạn trơ đáy" src="/data/article/mainimages/original/@p.Item1.Image">
+                        </picture><span class="icon_thumb_videophoto">
+                            <svg class="ic ic-camera">
+                                <use xlink:href="#Camera"></use>
+                                <svg id="Camera" viewBox="0 0 32 32">
+                                    <path d="M16 24c-3.4 0-6-2.6-6-6s2.6-6 6-6c3.4 0 6 2.6 6 6s-2.6 6-6 6zM30 8h-5l-3.4-5.2c-0.4-0.4-1-0.8-1.6-0.8h-8c-0.6 0-1.2 0.4-1.6 0.8l-3.4 5.2h-5c-1.2 0-2 0.8-2 2v18c0 1.2 0.8 2 2 2h28c1.2 0 2-0.8 2-2v-18c0-1.2-0.8-2-2-2z"></path>
+                                </svg>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="width_common box-info-news">
+                    <h3 class="title-news"><a href="/bai-viet/@p.Item1.URL" title="@p.Item1.Name">@p.Item1.Name</a></h3>
+                </div>
+            </article>
+            @foreach (var item in p.Item2)
+            {
+                <div class="sub-news-cate">
+                    <article class="item-news">
+                        <h3 class="title-news"><a href="/bai-viet/@item.URL" title="@item.Name">@item.Name</a></h3>
+                    </article>
+                </div>
+            }
+
+        </div>
+    </div>
+}

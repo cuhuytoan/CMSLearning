@@ -1,0 +1,25 @@
+﻿@page
+@model CMS.Website.Pages.Shared._HomeBlockThreePartialModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<div class="col-left col-small">
+    @foreach (var p in Model.BlockThree)
+    {
+        <article class="item-news item-news-common">
+            <h3 class="title-news"><a style="font-weight: 700;" href="/bai-viet/@p.URL" title="@p.Name">@p.Name</a></h3>
+            <div class="thumb-art">
+                <a class="thumb thumb-5x3" href="#" title="@p.Name">
+                    <picture>
+                        <img class="lazy lazied" alt="Mất trắng tài sản sau lũ" src="/data/article/mainimages/original/@p.Image">
+                    </picture>
+                </a>
+            </div>
+            <p class="description"><a href="/bai-viet/@p.URL" title="@p.Name">@p.Description</a></p>
+        </article>
+    }
+
+
+</div>

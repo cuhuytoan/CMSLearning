@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+    @RenderSection("metatags", required: false)
+
+    <meta content="Tạp chí Người xây dựng" name="author" />
+    <meta content="Tạp chí Người xây dựng" name="copyright" />
+    <meta content="Tạp chí Người xây dựng" itemprop="sourceOrganization" name="source" />
+    <meta content="canhnn@gmail.com" name="EMail" />
+    <meta property="article:publisher" content="https://www.facebook.com/tapchinguoixaydung/" />
+    <meta property="article:author" content="https://www.facebook.com/tapchinguoixaydung/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Expires" content="600" />
+    <meta content="INDEX,FOLLOW,ALL" name="robots" />
+    <meta content="1 day" name="revisit-after" />
+    <meta content="General" name="document-rating" />
+    <meta content="Global" name="document-distribution" />
+    <meta content="Global" name="distribution" />
+    <meta content="News" name="area" />
+    <meta content="vietnam" name="placename" />
+    <meta content="Document" name="resource-type" />
+    <meta content="Vietnam" name="classification" />
+    <meta content="All" name="rating" />
+    <meta name="geo.placename" content="Ha Noi, Viet Nam" />
+    <meta name="geo.region" content="VN-HN" />
+    <meta name="geo.position" content="21.030624;105.782431" />
+    <meta name="ICBM" content="21.030624, 105.782431" />
+    <meta name="revisit-after" content="days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favico.ico" />
+
+    <!-- META FOR FACEBOOK -->
+    <meta property="article:publisher" content="https://www.facebook.com/tapchinguoixaydung/" />
+    <meta property="article:author" content="https://www.facebook.com/tapchinguoixaydung/" />
+    <meta property="fb:pages" content="00000" />
+    <meta property="fb:app_id" content="00000" />
+    <meta property="fb:admins" content="nncanh" />
+    <meta property="og:site_name" content="Tạp chí Người xây dựng" />
+    <!-- END META FOR FACEBOOK -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" content="tapchinguoixaydung">
+    <meta name="twitter:creator" content="tapchinguoixaydung">
+    <!-- End Twitter Card -->
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/favicon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16.png">
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/assets/vendors/common/jquery.min.js"></script>
+</head>
+<body>
+    <div id="site">
+        @await Html.PartialAsync("~/Pages/Shared/_HeaderPartial.cshtml")
+        <main class="site-main" id="main" role="main">
+            @RenderBody()
+        </main>
+        @await Html.PartialAsync("~/Pages/Shared/_FooterPartial.cshtml")
+        <a id="to_top" href="javascript:;" title="Lên đầu trang">
+            <svg class="ic ic-arrow-up">
+                <use xlink:href="#Arrow-Up-1">
+                    <svg id="Arrow-Up-1" viewBox="0 0 32 32">
+                        <path d="M2.6 13.4l2.8 2.8 8.6-8.6v24.4h4v-24.4l8.6 8.6 2.8-2.8-13.4-13.4-13.4 13.4z"></path>
+                    </svg>
+                </use>
+            </svg>
+        </a>
+    </div>
+    <script src="/assets/js/all.bundle.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

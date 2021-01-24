@@ -1,0 +1,110 @@
+﻿@page
+@model CMS.Website.Pages.Home.IndexModel
+@{
+    ViewData["Title"] = "Tạp chí người xây dựng - Trang chủ";
+    Layout = "~/Pages/Shared/_LayoutHome.cshtml";
+}
+@section metatags{
+    <meta name="description" content="Website chính thức Tạp chí Người xây dựng. Cơ quan chủ quản: Tổng hội xây dựng Việt Nam. Cập nhật tin tức mới nhất, nhanh nhất về lĩnh vực xây dựng, kiến trúc, quy hoạch">
+    <meta name="keywords" content="Tạp chí Người xây dựng, Tổng hội xây dựng Việt Nam, xây dựng, kiến trúc, quy hoạch">
+    <meta name="author" content="Tạp chí Người xây dựng">
+    <meta name="twitter:card" content="Website chính thức Tạp chí Người xây dựng. Cơ quan chủ quản: Tổng hội xây dựng Việt Nam">
+    <meta name="twitter:site" content="https://nguoixaydung.com.vn/">
+    <meta name="twitter:image" content="https://nguoixaydung.com.vn/assets/images/logo.png">
+    <meta name="twitter:description" content="Website chính thức Tạp chí Người xây dựng. Cơ quan chủ quản: Tổng hội xây dựng Việt Nam. Cập nhật tin tức mới nhất, nhanh nhất về lĩnh vực xây dựng, kiến trúc, quy hoạch">
+    <meta property="og:url" content="https://nguoixaydung.com.vn/">
+    <meta property="og:title" content="Tạp chí Người xây dựng.">
+    <meta property="og:description" content="Website chính thức Tạp chí Người xây dựng. Cơ quan chủ quản: Tổng hội xây dựng Việt Nam. Cập nhật tin tức mới nhất, nhanh nhất về lĩnh vực xây dựng, kiến trúc, quy hoạch">
+    <meta property="og:image" content="https://nguoixaydung.com.vn/assets/images/logo.png">
+    <meta property="og:type" content="website">
+    <link id="canonical" rel="canonical" href="https://nguoixaydung.com.vn" />
+}
+<section class="section section_topstory mt-30">
+    <div class="container flexbox">
+        <div class="col-left-top">
+            <div class="wrapper-topstory-folder wrapper-topstory-folder-v2 wrapper-topstory-home flexbox width_common">
+                <article id="blockone" class="item-news full-thumb article-topstory">
+                    @*BlockOne*@
+                </article>
+                <div id="blocktwo" class="sub-news-top">
+                    @*BlockTwo*@
+                </div>
+            </div>
+        </div>
+        <aside class="col-right-top">
+            <div class="box-category">
+                <div class="banner-ads">
+                    <a href="#" title="">
+                        <picture>
+                            <img src="~/data/advertising/mainimages/original/2.jpg" />
+                        </picture>
+                    </a>
+                    <a href="#" title="">
+                        <picture>
+                            <img src="~/data/advertising/mainimages/original/3.jpg" />
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+<section class="section section_stream_home section_container">
+    <div class="container has_border flexbox">
+        <div class="col-left col-small">
+            <div id="blockthree">
+                @*Block Three*@
+            </div>
+        </div>
+        <div class="col-center item-box-cate box-last">
+            <div id="category1">
+            </div>
+            <div id="category2">
+            </div>
+            <div id="category3">
+            </div>
+        </div>
+        <aside class="col-right-top">
+            <div class="box-category">
+                <h2 class="parent-cate"><a class="inner-title box-title" style="font-family: Merriweather,serif;" href="/chuyen-muc/tap-chi-in" title="Tạp chí in">Tạp chí in</a></h2>
+                <div class="banner-ads">
+                    <a class="" href="/data/tapchiin/Banin12.2020.pdf" target="_blank" title="">
+                        <img src="~/data/advertising/mainimages/original/Bia12.2020.jpg" />
+                    </a>
+                    <a class="" href="/data/tapchiin/Banin34.2020.pdf" target="_blank" title="">
+                        <img src="~/data/advertising/mainimages/original/Bia34.2020.jpg" />
+                    </a>
+                    <a class="" href="/data/tapchiin/Banin56.2020.pdf" target="_blank" title="">
+                        <img src="~/data/advertising/mainimages/original/Bia56.2020.jpg" />
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+<section class="section section_container">
+    <section class="section section_container">
+        <div id="category4" class="container has_border">
+        </div>
+    </section>
+    <section class="section section_container">
+        <div id="category5" class="container has_border">
+        </div>
+    </section>
+    <section class="section section_container">
+        <div id="category6" class="container has_border">
+        </div>
+    </section>
+</section>
+
+<script type="text/javascript">
+    $("#blockone").load("/Shared/_HomeBlockOnePartial?Id=1");
+    $("#blocktwo").load("/Shared/_HomeBlockTwoPartial?Id=2");
+    $("#blockthree").load("/Shared/_HomeBlockThreePartial?Id=3");
+    $("#category1").load("/Shared/_CategoryOnePartial?Id=2");
+    $("#category2").load("/Shared/_CategoryOnePartial?Id=3");
+    $("#category3").load("/Shared/_CategoryOnePartial?Id=7");
+    $("#category4").load("/Shared/_CategoryTwoPartial?Id=5");
+    $("#category5").load("/Shared/_CategoryTwoPartial?Id=11");
+    $("#category6").load("/Shared/_CategoryTwoPartial?Id=4");
+</script>
